@@ -1,0 +1,26 @@
+RewriteEngine On
+
+#Definition des roles
+# ^veut dire je commence par, $ veut dire je termine par
+
+#un point veut je commence par n'importe quel caractere
+# {2} existe deux caractere
+#[0-9] un chiffre compris entre 0 et 9
+#[a-z] une lettre comprise entre a et z
+#[A-Z] une lettre comprise entre A rt Z
+#[0-9]{4}exactement 4 chiffres
+
+RewriteRule ^.{0}$ index.php
+RewriteRule ^login$ login.php
+RewriteRule ^accueil$ accueil.php 
+
+
+RewriteRule ^formation$ view/formation/liste.php
+RewriteRule ^lieux$ view/lieu/liste.php
+RewriteRule ^map-lieu-formation$ view/lieu/map.php
+RewriteRule ^ajax-lieu$ view/lieu/ajax_lieu.php
+
+RewriteRule ^loginController$ controller/loginController.php
+RewriteRule ^loginController$ controller/formationController.php
+RewriteRule ^loginController$ controller/lieuController.php
+
